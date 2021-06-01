@@ -71,27 +71,6 @@ class EditProfile extends Component {
         this.userData.set(name, value)
         this.setState({ [name]: value, fileSize });
       };
-    
-      // clickSubmit = (event) => {
-      //   event.preventDefault();
-      //   this.setState({loading: true})
-      //   if(this.isValid()) {
-      //       const userId =this.props.match.params.userId;
-      //       const token = isAuthenticated().token
-    
-      //       update(userId, token, this.userData).then((data) => {
-      //         if (data.error) this.setState({ error: data.error });
-      //         else {
-      //           updateUser(data, () => {
-      //             this.setState({
-      //               redirectToProfile: true
-      //           });
-      //           })
-      //         }
-
-      //       });
-      //   }
-      // };
 
       clickSubmit = event => {
         event.preventDefault();
@@ -189,7 +168,7 @@ class EditProfile extends Component {
         }
 
         const photoUrl = id 
-        ? `${process.env.REACT_APP_API_URL}/user/photo/${id}?${new Date().getTime()}` 
+        ? `localhost:3000/api/user/photo/${id}?${new Date().getTime()}` 
         : DefaultProfile
 
         return (
