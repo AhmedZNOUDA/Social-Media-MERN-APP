@@ -93,7 +93,7 @@ export const resetPassword = resetInfo => {
 };
 
 export const socialLogin = user => {
-  return fetch(`localhost:3000/api/social-login/`, {
+  return fetch(`http://localhost:3000/api/social-login/`, {
       method: "POST",
       headers: {
           Accept: "application/json",

@@ -146,7 +146,7 @@ class EditPost extends Component {
         <img
           className="img-thumbnail"
           style={{ height: "200px", width: "auto" }}
-          src={`localhost:3000/api/post/photo/${id}${new Date().getTime()}`}
+          src={`http://localhost:3000/api/post/photo/${id}${new Date().getTime()}`}
           onError={(i) => (i.target.src = `${DefaultPost}`)}
           alt={title}
         />

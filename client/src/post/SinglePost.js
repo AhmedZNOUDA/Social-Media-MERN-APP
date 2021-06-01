@@ -89,7 +89,7 @@ class SinglePost extends Component {
     return (
       <div className="card-body">
         <img
-          src={`localhost:3000/api/post/photo/${post._id}`}
+          src={`http://localhost:3000/api/post/photo/${post._id}`}
           alt={post.title}
           onError={(i) => (i.target.src = `${DefaultPost}`)}
           className="img-thunbnail mb-3"

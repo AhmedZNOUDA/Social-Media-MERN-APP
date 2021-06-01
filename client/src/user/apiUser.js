@@ -1,5 +1,5 @@
 export const read = (userId, token) => {
-    return fetch(`localhost:3000/api/user/${userId}`, {
+    return fetch(`http://localhost:3000/api/user/${userId}`, {
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -14,7 +14,7 @@ export const read = (userId, token) => {
 }
 
 export const list = () => {
-    return fetch(`localhost:3000/api/users`, {
+    return fetch(`http://localhost:3000/api/users`, {
         method: "GET"
     })
     .then(response => {
@@ -24,7 +24,7 @@ export const list = () => {
 }
 
 export const remove = (userId, token) => {
-    return fetch(`localhost:3000/api/user/${userId}`, {
+    return fetch(`http://localhost:3000/api/user/${userId}`, {
         method: "DELETE",
         headers: {
             "Accept": "application/json",
@@ -40,7 +40,7 @@ export const remove = (userId, token) => {
 
 export const update = (userId, token, user) => {
     console.log("User Data", user)
-    return fetch(`localhost:3000/api/user/${userId}`, {
+    return fetch(`http://localhost:3000/api/user/${userId}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",
@@ -66,7 +66,7 @@ export const updateUser = (user, next) => {
 }
 
 export const follow = (userId, token, followId) => {
-    return fetch(`localhost:3000/api/user/follow`, {
+    return fetch(`http://localhost:3000/api/user/follow`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",
@@ -83,7 +83,7 @@ export const follow = (userId, token, followId) => {
 
 
 export const unfollow = (userId, token, unfollowId) => {
-    return fetch(`localhost:3000/api/user/unfollow`, {
+    return fetch(`http://localhost:3000/api/user/unfollow`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",
@@ -99,7 +99,7 @@ export const unfollow = (userId, token, unfollowId) => {
 }
 
 export const findPeople = (userId, token) => {
-    return fetch(`localhost:3000/api/user/findpeople/${userId}`, {
+    return fetch(`http://localhost:3000/api/user/findpeople/${userId}`, {
         method: "GET",
         headers: {
             "Accept": "application/json",

@@ -168,7 +168,7 @@ class EditProfile extends Component {
         }
 
         const photoUrl = id 
-        ? `localhost:3000/api/user/photo/${id}?${new Date().getTime()}` 
+        ? `http://localhost:3000/api/user/photo/${id}?${new Date().getTime()}` 
         : DefaultProfile
 
         return (

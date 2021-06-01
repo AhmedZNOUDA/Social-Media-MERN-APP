@@ -31,7 +31,7 @@ class Posts extends Component {
               <div className="card" key={i}>
                 <div className="card-body" style={{ margin: "10" }}>
                   <img
-                    src={`localhost:3000/api/post/photo/${post._id}`}
+                    src={`http://localhost:3000/api/post/photo/${post._id}`}
                     alt={post.title}
                     onError={(i) => (i.target.src = `${DefaultPost}`)}
                     className="img-thunbnail mb-3"
