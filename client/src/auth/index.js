@@ -1,5 +1,5 @@
 export const signup = (user) => {
-    return fetch(`localhost:3000/api/signup`, {
+    return fetch(`http://localhost:3000/api/signup`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -14,7 +14,7 @@ export const signup = (user) => {
   };
 
   export const signin = (user) => {
-    return fetch(`localhost:3000/api/signin`, {
+    return fetch(`http://localhost:3000/api/signin`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -38,7 +38,7 @@ export const signup = (user) => {
 export const signout = (next) => {
     if (typeof window !== undefined) localStorage.removeItem("jwt");
     next();
-    return fetch(`localhost:3000/api/signout`, {
+    return fetch(`http://localhost:3000/api/signout`, {
       method: "GET",
     })
       .then((response) => {
@@ -61,7 +61,7 @@ export const signout = (next) => {
 
   export const forgotPassword = email => {
     console.log("email: ", email);
-    return fetch(`localhost:3000/api/forgot-password/`, {
+    return fetch(`http://localhost:3000/api/forgot-password/`, {
         method: "PUT",
         headers: {
             Accept: "application/json",
@@ -77,7 +77,7 @@ export const signout = (next) => {
 };
 
 export const resetPassword = resetInfo => {
-  return fetch(`localhost:3000/api/reset-password/`, {
+  return fetch(`http://localhost:3000/api/reset-password/`, {
       method: "PUT",
       headers: {
           Accept: "application/json",
