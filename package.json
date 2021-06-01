@@ -4,7 +4,7 @@
   "description": "MERN SOCIAL APP",
   "main": "app.js",
   "scripts": {
-    "install-client": "npm install __prefix client",
+    "install-client": "npm install --prefix client",
     "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm start --prefix client",
