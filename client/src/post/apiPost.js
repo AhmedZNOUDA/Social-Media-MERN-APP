@@ -14,7 +14,7 @@ export const create = (userId, token, post) => {
 };
 
 export const list = () => {
-  return fetch(`https://localhost:3000/api/posts`, {
+  return fetch(`http://localhost:3000/api/posts`, {
     method: "GET",
   })
     .then((response) => {
