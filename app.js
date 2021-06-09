@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(expressValidator());
-app.use(cors());
+app.use(cors({ origin: "https://earafni.herokuapp.com/", credentials: true }));
 
 app.use("/api", postRoutes);
 app.use("/api", authRoutes);
@@ -47,7 +47,7 @@ app.use(function (err, req, res, next) {
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
-  app.get("https://earafni.herokuapp.com/", (req, res) => {
+  app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }

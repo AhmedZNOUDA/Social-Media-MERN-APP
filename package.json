@@ -29,5 +29,9 @@
     "nodemailer": "^6.6.1",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
-  }
+  },
+  "engines": {
+    "node": "14.x.x",
+    "npm": "1.x.x"
+    }
 }
