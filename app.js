@@ -8,7 +8,7 @@ const expressValidator = require("express-validator");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
 const path = require("path");
-dotenv.config();
+dotenv.config({ path: "./.env" });
 
 //DB
 mongoose
