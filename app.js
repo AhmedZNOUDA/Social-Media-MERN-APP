@@ -12,15 +12,11 @@ dotenv.config();
 
 //DB
 mongoose
-  .connect(
-    process.env.MONGODB_URI ||
-      "mongodb+srv://Ahmad:ws0812LTB15@cluster0.u0t3q.mongodb.net/socialNetwork?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    }
-  )
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(() => console.log("Database Connected"));
 
 mongoose.connection.on("error", (err) => {
