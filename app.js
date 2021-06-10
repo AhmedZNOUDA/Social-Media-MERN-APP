@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(expressValidator());
-app.use(cors({ origin: "https://earafni.herokuapp.com/", credentials: true }));
+app.use(cors());
 
 app.use("/api", postRoutes);
 app.use("/api", authRoutes);
