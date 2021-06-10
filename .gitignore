@@ -1,2 +1,5 @@
+# production
+/client/build
+
 /node_modules
 .env
